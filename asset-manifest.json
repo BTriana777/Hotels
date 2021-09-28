@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Hotels/static/css/main.90f991c9.chunk.css",
-    "main.js": "/Hotels/static/js/main.78fcedd6.chunk.js",
-    "main.js.map": "/Hotels/static/js/main.78fcedd6.chunk.js.map",
+    "main.css": "/Hotels/static/css/main.555e654d.chunk.css",
+    "main.js": "/Hotels/static/js/main.ed43dced.chunk.js",
+    "main.js.map": "/Hotels/static/js/main.ed43dced.chunk.js.map",
     "runtime-main.js": "/Hotels/static/js/runtime-main.41e58693.js",
     "runtime-main.js.map": "/Hotels/static/js/runtime-main.41e58693.js.map",
     "static/js/2.a4004940.chunk.js": "/Hotels/static/js/2.a4004940.chunk.js",
     "static/js/2.a4004940.chunk.js.map": "/Hotels/static/js/2.a4004940.chunk.js.map",
     "index.html": "/Hotels/index.html",
-    "static/css/main.90f991c9.chunk.css.map": "/Hotels/static/css/main.90f991c9.chunk.css.map",
+    "static/css/main.555e654d.chunk.css.map": "/Hotels/static/css/main.555e654d.chunk.css.map",
     "static/js/2.a4004940.chunk.js.LICENSE.txt": "/Hotels/static/js/2.a4004940.chunk.js.LICENSE.txt",
     "static/media/style.css": "/Hotels/static/media/image_background.387ca069.png"
   },
   "entrypoints": [
     "static/js/runtime-main.41e58693.js",
     "static/js/2.a4004940.chunk.js",
-    "static/css/main.90f991c9.chunk.css",
-    "static/js/main.78fcedd6.chunk.js"
+    "static/css/main.555e654d.chunk.css",
+    "static/js/main.ed43dced.chunk.js"
   ]
 }
