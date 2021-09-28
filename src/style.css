@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-image: url("./image_background.png");
+}
+
+/* ------------------Header------------------ */
+header{
+  background-color: #f9ccff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 35vh;
+}
+.headerText{
+  margin-left: 10%;
+}
+.headerText h1{
+  color: #000000;
+  font-size: 65px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+.headerText h3{
+  color: #000000;
+  font-size: 20px;
+  font-weight: 200;
+}
+/* ------------------FILTERS------------------ */
+.contaFilters{
+  background-color: #9CB5E6;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputDate{
+  background-color: #5584E0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  color: #f2f2f2;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  margin: 13px;
+  font-size: 16px;
+}
+::-webkit-calendar-picker-indicator{
+  background-color: #f2f2f2;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+select{
+  margin: 13px;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #5584E0;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: #f2f2f2;
+  border: none;
+  font-size: 16px;
+}
+.contaButton-filter{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-filter{
+  margin: 13px;
+  width: 85px;
+  background-color:#fa503f ;
+  border: none;
+  padding: 10px;
+  color: #f2f2f2;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ------------------CARDS------------------ */
+.centerCards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerCards{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contaCard{
+  margin: 20px;
+  height: 780px;
+  width: 300px;
+  display: flex;
+  background-color: #f2f2f2;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 6px 4px 27px -3px rgba(0,0,0,0.75);
+  /* transition: step-end 0.7s; */
+}
+.contaImage{
+  height: 207px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaImage img{
+  padding-top: 6px;
+  width: 288px;
+  height: 199px;
+  border-radius: 20px 20px 0px 0px;
+}
+.contaTitle{
+  position: relative;
+  top: -10px;
+  width: 300px;
+  height: 55px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaTitle div{
+  background: #5584E0;
+  border-radius: 20px;
+  width: 256px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaTitle h1{
+  width: 256px;
+  height: 50px;
+  padding: 6px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 22px;
+  color: #F2F2F2;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.contaInfo{
+  width: 300px;
+  height: 317px;
+  background: #f2f2f2;
+  position: relative;
+  top: -70px;
+  box-shadow: 0px -3px 3px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contaDescri{
+  display: flex;
+  margin-top: 55px;
+  margin-bottom: 10px;
+  height: 286px;  
+}
+.contaDescri p{
+  padding: 12px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  /* align-items: center; */
+}
+.contaLocation{
+  position: absolute;
+  top: 330px;
+
+  width: 300px;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contaLocation div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 275px;
+}
+.contaLocation svg{
+  width: 26px;
+  height: 34px;
+  color: #5584E0;
+}
+.contaLocation p{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+.contaBedPrice{
+  position: absolute;
+  top: 370px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 69px;
+  margin-bottom: 5px;
+}
+.contaBed{
+  width: 180px;
+  height: 43px;
+  display: flex;
+  background: #f2f2f2;
+  box-shadow: 2px 3px 5px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+.contaBedImage{
+  width: 52px;
+  height: 43px;
+  background: #5584E0;
+  border-radius: 10px 0px 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaBedImage svg{
+  width: 37px;
+  height: 29px;
+  color: #f2f2f2;
+}
+.contaBed p{
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+.contaPrice{
+  width: 100px;
+  height: 43px;
+  background: #5584E0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaPrice p{
+  font-size: 18px;
+  line-height: 27px;  
+  font-weight: 500;
+  color: #f2f2f2;
+  letter-spacing: 4px;
+}
+.contaDate{
+  position: absolute;
+  top: 425px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 101px;
+  margin-bottom: 8px;
+  padding-left: 90px;
+}
+.contaDate div{
+  width: 296px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contaDate .icon{
+  color: #5584E0;
+  width: 22px;
+  height: 22px;
+}
+.contaDate p{
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+.contaButton{
+  position: absolute;
+  top: 510px;
+
+  width: 300px;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaButton .button{
+  width: 250px;
+  height: 52px;
+  background: #FA503F;
+  box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button h3{
+  font-weight: 700;
+  font-size: 28px;
+  color: #f2f2f2;
+  letter-spacing: 3px;
+}
+.opaco {
+  color: rgba(182, 182, 182, 0.3);
+}

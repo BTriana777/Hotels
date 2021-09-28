@@ -1,25 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Filters from "./Filters";
+import Cards from "./cards/Cards";
+import hotelsData from "./data";
+import "./style.css";
+import { useState }  from "react";
 
-function App() {
+const App = () => {
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
+  const [country, setCountry] = useState("Todos los Paises");
+  const [price, setPrice] = useState("Cualquier Precio");
+  const [size, setSize] = useState("Todos los tamaño");
+
+  const newListHotels = () => {
+    let newLits = hotelsData
+      .filter((data) => {
+        if (!dateFrom || !dateTo) {
+          return data;
+        }
+        return (
+          data.availabilityFrom > new Date(dateFrom).getTime() &&
+          data.availabilityTo < new Date(dateTo).getTime()
+        );
+      })
+      .filter((data) => {
+        if (size === "Pequeño") {
+          return data.rooms <= 10;
+        } else if (size === "Mediano") {
+          return data.rooms > 10 && data.rooms <= 20;
+        } else if (size === "Grande") {
+          return data.rooms > 20;
+        }
+        return data;
+      })
+      .filter((data) => {
+        if (country !== "Todos los Paises") {
+          return data.country === country;
+        }
+        return data;
+      })
+      .filter((data) => {
+        if (price !== "Cualquier Precio") {
+          return data.price === Number(price);
+        }
+        return data;
+      });
+    return newLits;
+  };
+  const newListFiltered = newListHotels();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header country={country} dateFrom={dateFrom} dateTo={dateTo} price={price} size={size}/>
+      <Filters 
+      dateFrom={dateFrom} 
+      setDateFrom={setDateFrom}
+      dateTo={dateTo}
+      setDateTo={setDateTo}
+      country={country}
+      setCountry={setCountry}
+      price={price}
+      setPrice={setPrice}
+      size={size}
+      setSize={setSize}
+      />
+      {hotelsData.length === 0 ? (<h1>SAPO NO HAY NADA</h1>) : (
+        <Cards newListFiltered={newListFiltered}/>
+      )}
+    </>
   );
-}
+};
 
 export default App;
